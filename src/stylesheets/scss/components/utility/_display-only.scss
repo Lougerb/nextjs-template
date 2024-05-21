@@ -1,0 +1,11 @@
+@include mq_pc {
+    .sp-only {
+        display: none !important;
+    }
+}
+
+@include mq_sp {
+    .pc-only {
+        display: none !important;
+    }
+}

@@ -1,0 +1,18 @@
+// Media Query
+@mixin under_vw($pixel) {
+    @media screen and (max-width: $pixel + px) {
+        @content;
+    }
+}
+
+@mixin over_vw($pixel) {
+    @media screen and (min-width: ($pixel + 1) + px) {
+        @content;
+    }
+}
+
+@mixin between_vw($minPixel, $maxPixel) {
+    @media (min-width: ($minPixel) + px) and (max-width: ($maxPixel) + px) {
+        @content;
+    }
+}

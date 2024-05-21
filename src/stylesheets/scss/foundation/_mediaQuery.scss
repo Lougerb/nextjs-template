@@ -1,0 +1,12 @@
+// Media Query
+@mixin mq_pc {
+    @media screen and (min-width: ($pc-layout-width + 1px)) {
+        @content;
+    }
+}
+
+@mixin mq_sp {
+    @media screen and (max-width: $sp-layout-width) {
+        @content;
+    }
+}

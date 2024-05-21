@@ -1,0 +1,13 @@
+@import url(sanitize.css);
+// foundation
+@import './foundation/foundation';
+// layout
+@import 'layout/layout';
+// components
+@import './components/components';
+// pages
+@import './pages/pages';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

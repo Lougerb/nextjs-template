@@ -1,0 +1,137 @@
+.nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    height: 10rem;
+    width: auto;
+
+    @include mq_sp {
+        right: 0;
+        height: fit-content;
+        position: fixed;
+    }
+
+    &-wrapper {
+        height: 100%;
+        position: relative;
+
+        @include mq_sp {
+            // overflow: hidden;
+        }
+    }
+    
+    &-trigger {
+        width: 3.5rem;
+        height: 10rem;
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        z-index: 2;
+
+        @include mq_sp {
+            display: flex;
+        }
+        
+        .wrapper {
+            height: 3rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            align-self: center;
+        }
+
+        &__line {
+            height: 0.2rem;
+            width: 100%;
+            position: absolute;
+            background-color: #707070;
+            transition: 0.3s all ease;
+
+            &:first-child {
+                top: 0;
+                left: 0;
+                margin: auto;
+
+                .show-nav & {
+                    transform: rotate(45deg);
+                    top: calc(50% - 0.1rem);
+                    // bottom: 0;
+                }
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0%;
+                margin: auto;
+
+                .show-nav & {
+                    right: -200%;
+                }
+            }
+
+            &:last-child {
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                
+                .show-nav & {
+                    transform: rotate(-45deg);
+                    bottom: calc(50% - 0.1rem);
+                }
+            }
+        }
+    }
+
+    &-menu {
+        @include mq_pc {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        @include mq_sp {
+            $navMenuWidth: 20rem;
+            margin-right: -$navMenuWidth;
+            width: $navMenuWidth;
+            height: 100vh;
+            padding: 6rem 2rem 2rem;
+            position: relative;
+            background-color: #eee;           
+            transition: 0.3s ease;
+
+            .show-nav & {
+                margin-right: 0rem;
+                transition: 0.3s ease;
+            }
+        }
+
+        &__item {
+            &:not(:last-child) {
+                @include mq_pc {
+                    margin-right: 2rem;
+                }
+
+                @include mq_sp {
+                    margin-bottom: 1rem;
+                }
+            }
+            
+            &__anchor {
+                display: block;
+                font-size: 2.4rem;
+                font-weight: 500;
+                line-height: 1.333;
+                text-decoration: none;
+                color: #707070;
+
+                &:hover {
+                    color: inherit;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

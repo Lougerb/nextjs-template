@@ -1,0 +1,12 @@
+// layout
+.layout {
+    margin: 0 auto;
+    max-width: calc(#{$pc-layout-width} - #{$pc-window-gap * 2});
+    padding: 0 $pc-window-gap;
+
+    @include mq_sp {
+        margin: 0 auto;
+        padding: 0 $sp-window-gap;
+        width: auto;
+    }
+}
