@@ -21,7 +21,6 @@ export default async function Crud() {
                 <CrudItem text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vero? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, odit officia quidem commodi optio nihil delectus non illum nisi quaerat.'}/>
                 <CrudItem text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vero? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, odit officia quidem commodi optio nihil delectus non illum nisi quaerat.'}/>
                 <CrudItem text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vero? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, odit officia quidem commodi optio nihil delectus non illum nisi quaerat.'}/>
-                <CrudItem text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vero? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, odit officia quidem commodi optio nihil delectus non illum nisi quaerat.'}/>
             </ul>
         </div>
     </>);

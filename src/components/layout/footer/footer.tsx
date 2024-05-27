@@ -1,5 +1,6 @@
 import logo from '@/assets/img/common/logo.svg';
 import Image from 'next/image';
+import React from 'react';
 
 function Footer() {
     return (

@@ -1,7 +1,8 @@
 import ButtonLink from "@/components/button/ButtonLink";
-import InputText from "@/components/input/inputText";
+import InputText from "@/components/input/InputText";
 import InputRadio from "@/components/input/InputRadio";
 import InputCheckBox from "@/components/input/InputCheckbox";
+import React from "react";
 
 export const metadata = {
     title: 'subpage title',
@@ -17,14 +18,16 @@ export default function Subpage() {
                         <h2 className="head2 mb-[2rem]">Button</h2>
                         <div className="subpage__cont">
                             <ButtonLink 
-                                text={'My Button'} 
-                                href={'www.google.com'} /> 
+                                text={'My Button'}
+                                href={'www.google.com'} 
+                                target={undefined} 
+                                download={undefined} /> 
                         </div>
                     </section>
                     <section className="subpage__section">
                         <h2 className="head2 mb-[2rem]">Input Text</h2>
                         <div className="subpage__cont">
-                            <InputText placeholder={'Enter Text'} /> 
+                            <InputText placeholder={'Enter Text'} id={undefined} /> 
                         </div>
                     </section>
                     <section className="subpage__section">

@@ -1,4 +1,7 @@
 'use client'
+
+import React from "react";
+
 export default function ButtonLink({className="", text, href, target, download}){
     return(<>
         <a href={href} 
