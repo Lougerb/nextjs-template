@@ -2,11 +2,20 @@
 
 import React from "react";
 
-export default function ButtonLink({className="", text, href, target, download}){
+type ButtonLinkProps = {
+    className: String,
+    text: String,
+    href: String,
+    target: String,
+    onClick?: React.MouseEventHandler
+}
+
+export default function ButtonLink({className="", text, href, target, onClick}: ButtonLinkProps){
     return(<>
         <a href={href} 
             className={`button-link ${className}`} 
             target={target} 
-            download={download}>{text}</a>
+            onClick={onClick}
+            >{text}</a>
     </>);
 }

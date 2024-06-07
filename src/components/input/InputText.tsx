@@ -1,7 +1,15 @@
 import React from "react";
 
-export default function InputText({className="", id, name='', placeholder="placeholder"}) {
+type InputTextProps = {
+    className: String,
+    id: String,
+    name: String,
+    placeholder: String,
+    value: String,
+    onchange?: Function
+}
+export default function InputText({className="", id, name='', placeholder="placeholder", value, onchange}: InputTextProps) {
     return (<>
-        <input type="text" name={name} id={id} className={`input-text ${className}`} placeholder={placeholder}/>
+        <input type="text" name={name} id={id} className={`input-text ${className}`} placeholder={placeholder} value={value} onChange={onchange}/>
     </>)
 }
