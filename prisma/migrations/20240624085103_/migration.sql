@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Blog" ALTER COLUMN "updatedAt" SET DATA TYPE TIMESTAMPTZ(6);
