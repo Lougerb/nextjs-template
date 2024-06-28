@@ -22,7 +22,7 @@ time, mark, audio, video {
 html {
   font: 10px/1.7 "Roboto", sans-serif;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 2.667vw;
   }
@@ -57,7 +57,7 @@ a:hover {
 .header-logo:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .header-logo img {
     width: 14.5rem;
   }
@@ -71,7 +71,7 @@ a:hover {
   height: 10rem;
   width: auto;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .nav {
     right: 0;
     height: -webkit-fit-content;
@@ -92,7 +92,7 @@ a:hover {
   right: 2rem;
   z-index: 2;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .nav-trigger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -156,7 +156,7 @@ a:hover {
     height: 100%;
   }
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .nav-menu {
     margin-right: -20rem;
     width: 20rem;
@@ -178,7 +178,7 @@ a:hover {
     margin-right: 2rem;
   }
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .nav-menu__item:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -381,7 +381,7 @@ a:hover {
   width: 50rem;
   font-size: 1.8rem;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .input-text {
     width: 100%;
   }
@@ -390,7 +390,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
   }
@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: calc(1024px - 80px);
   padding: 0 40px;
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .layout {
     margin: 0 auto;
     padding: 0 2rem;
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none !important;
   }
 }
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   .pc-only {
     display: none !important;
   }

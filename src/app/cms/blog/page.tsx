@@ -1,4 +1,5 @@
 import prisma from "lib/prisma";
+import { getDateTime, getDateOnly } from "lib/globalFunc";
 import ButtonLink from "@/components/button/ButtonLink";
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default async function CmsBlog() {
         }
     });
     console.log(posts);
+    
 
     return (<>
         <div className="layout">
@@ -28,7 +30,8 @@ export default async function CmsBlog() {
                 {posts.map((post)=>{
                         return (<li className="py-[2rem] border-b border-[#333] border-solid grid grid-cols-12 items-center" key={post.id}>
                             <span className="block col-span-1 text-center">{post.id}</span>
-                            <span className="block col-span-7 text-ellipsis">{post.title}</span>                            
+                            <span className="block col-span-3 truncate">{post.title}</span>     
+                            <span className="block col-span-4 truncate">{getDateOnly(post.updatedAt,'mm-dd-yy')}</span>                            
                             <ButtonLink className={'bg-blue-400 col-span-2 justify-self-end'} text={'Edit'} href={`/cms/blog/edit/${post.id}`} target={''} />
                             <ButtonLink className={'bg-red-400 col-span-2 justify-self-end'} text={'Delete'} href={`/cms/blog/delete/${post.id}`} target={''} />
                         </li>);
