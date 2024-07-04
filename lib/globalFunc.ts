@@ -54,6 +54,5 @@ export function getDateOnly (date: Date, format: string = 'MM/DD/YY') {
         }
     });
     const joinDate = newFormat.join(getSpecialChar);
-    console.log(joinDate);
     return joinDate;
 }

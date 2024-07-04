@@ -1,6 +1,6 @@
 // Media Query
 @mixin mq_pc {
-    @media screen and (min-width: ($pc-layout-width + 1px)) {
+    @media screen and (min-width: ($sp-layout-width + 1px)) {
         @content;
     }
 }

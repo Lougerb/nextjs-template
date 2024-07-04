@@ -29,6 +29,10 @@ body {
     display: block;
     font-size: 1.6rem;
 	font-family: $font-family;
+
+	@include over_vw(768) {
+		min-width: $pc-layout-width;
+	}
 }
 
 a {

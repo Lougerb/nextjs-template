@@ -38,7 +38,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Prisma
 
-Start Prisma
+Start Prisma:
 ```bash
+npx prisma migrate dev
+```
+
+After creating or modifying Prisma Schema:
+```bash
+npx prisma migrate dev --create-only
 npx prisma migrate dev
 ```

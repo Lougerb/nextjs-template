@@ -9,6 +9,7 @@ export const metadata = {
 
   
 export default async function Blog() {
+
     const posts = await prisma.blog.findMany();
 
     return (<>
@@ -19,7 +20,9 @@ export default async function Blog() {
             <ul className="mb-[5rem] border-t border-solid border-[#333]">
 
                 {posts.map((post)=>{
-                        return (<li className="block py-[2rem] border-b border-[#333] border-solid" key={post.id}>{post.title}</li>);
+                        return (<li className="block py-[2rem] border-b border-[#333] border-solid" key={post.id}>
+                            <a href={`/blog/post/${post.id}`} className="block">{post.title}</a>
+                        </li>);
                     })}
             </ul>
             
