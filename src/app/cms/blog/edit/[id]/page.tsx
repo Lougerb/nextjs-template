@@ -5,9 +5,10 @@ import SubmitButton from "@/components/button/SubmitButton";
 import InputText from "@/components/input/InputText";
 import prisma from "lib/prisma";
 import Image from "next/image";
+import InputFile from "../../components/InputFile";
 
 export const metadata = {
-    title: 'Create New Post',
+    title: 'Edit Blog Post',
     description: 'This is a blog page',
 }
 type EditBlogParam = {
@@ -25,7 +26,7 @@ export default async function EditBlog({params}: EditBlogParam) {
             }
         });
         
-        console.log(post?.files);
+        
         
 
     return (
@@ -35,8 +36,7 @@ export default async function EditBlog({params}: EditBlogParam) {
                 <form action={editBlogWithID}>
                     <InputText className={'mb-[2rem]'} id={'title'} name={'title'} placeholder={'title'} defaultValue={post?.title!} />
                     <InputText className={''} id={'content'} name={'content'} placeholder={'content'} defaultValue={post?.content!} />
-                    <Image src={`/uploads/blog/${post?.id}/${post?.files}`} alt={`${post?.files}`} width={'200'} height={'200'} className="mt-[2rem]" />
-                    <input type="file" name="file" id="file" className="mt-[2rem]"  />
+                    <InputFile name="file" fileName={`${post?.files}`} id={postId}/>
                     <div className="flex justify-center items-center gap-[2rem] mt-[4rem]">
                         <ButtonLink className={''} text={'Go Back'} href={'../'} target={''}  />
                         <SubmitButton className={'block w-fit'} text={'Submit'} />

@@ -1,7 +1,7 @@
 import { createBlog } from "@/actions/blog";
 import SubmitButton from "@/components/button/SubmitButton";
 import InputText from "@/components/input/InputText";
-import InputFile from "./InputFile";
+import InputFile from "../components/InputFile";
 
 export const metadata = {
     title: 'Create New Post',
@@ -18,7 +18,7 @@ export default function CreateBlog() {
                     <InputText className={'mb-[2rem]'} id={'title'} name={'title'} placeholder={'title'} />
                     <InputText className={''} id={'content'} name={'content'} placeholder={'content'} />
                     {/* <input type="file" name="file" id="file" className="mt-[2rem]"  /> */}
-                    <InputFile name="file"/>
+                    <InputFile name="file" fileName=""/>
 
                     <SubmitButton className={'block w-fit mt-[2rem] mx-auto '} text={'Submit'} />
                 </form>
