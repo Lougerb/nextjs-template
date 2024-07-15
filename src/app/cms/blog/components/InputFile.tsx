@@ -5,10 +5,11 @@ import Image from "next/image";
 type InputFileParam = {
     name: string,
     fileName: string,
-    id?: number
+    id?: number,
+    defaultValue?: string
 }
 
-export default function InputFile({name, fileName, id}: InputFileParam) {
+export default function InputFile({name, fileName, id, defaultValue}: InputFileParam) {
     const [iFile, setFile] = useState('');
 
     const handleFile = (e:any) => {
@@ -41,6 +42,7 @@ export default function InputFile({name, fileName, id}: InputFileParam) {
                 <label className="figure block relative w-[50rem] h-[50rem] mt-[2rem]  z-10">
                     {renderPreview()}
                     <input type="file" name={name} id={name} className="mt-[2rem] hidden"  onChange={(e)=>{handleFile(e);}} />
+                    <input type="hidden" name="currentFile" id="currentFile" className="hidden" defaultValue={`${fileName ? fileName : ''}`}/>
                     <div className="w-[50rem] h-[50rem] flex items-center justify-center bg-gray-300/0 
                                     cursor-pointer text-[#fff] absolute inset-0 m-auto 
                                     hover:bg-zinc-300/50 z-10">Change Image</div>

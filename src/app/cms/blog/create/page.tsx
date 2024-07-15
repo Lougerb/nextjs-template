@@ -17,7 +17,6 @@ export default function CreateBlog() {
                 <form action={createBlog}>
                     <InputText className={'mb-[2rem]'} id={'title'} name={'title'} placeholder={'title'} />
                     <InputText className={''} id={'content'} name={'content'} placeholder={'content'} />
-                    {/* <input type="file" name="file" id="file" className="mt-[2rem]"  /> */}
                     <InputFile name="file" fileName=""/>
 
                     <SubmitButton className={'block w-fit mt-[2rem] mx-auto '} text={'Submit'} />

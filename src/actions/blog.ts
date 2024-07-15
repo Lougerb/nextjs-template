@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 
 import prisma from "lib/prisma";
 import { extname, join } from "path";
-import { existsSync, mkdirSync, writeFile } from "fs";
+import { existsSync, mkdirSync, readdir, unlink, writeFile } from "fs";
 
 const postName : string = "blog";
 
@@ -62,6 +62,8 @@ export async function editBlog ( id: number, formData: FormData ){
 
     if (file.size != 0) {
         newFileName = `main-${new Date().getTime()}${fileExt}`;
+    } else {
+        newFileName = formData.get('currentFile') as string;
     }
 
     
@@ -74,18 +76,35 @@ export async function editBlog ( id: number, formData: FormData ){
         }
     });
 
+    
+
     // Upload Files
     if (file.size != 0) {
         const dir =`${process.cwd()}/public/uploads/${postName}/${id}`;
         const path = join(dir,'/',`${newFileName}`);
-        
+
         if(!existsSync(dir)) {
             mkdirSync(dir,{ recursive: true });
             writeFile(path, buffer, (e)=>{console.log(e)});
     
         } else {
+            // Delete previous file
+            readdir(dir, (err, files)=> {
+                if (err) throw err;
+
+                for (const file of files) {
+                    const filePath = `${dir}/${file}`;
+                    unlink(filePath, err=>{
+                        if (err) throw err;
+                    })
+                }
+            })
+            
+            // Upload new file
             writeFile(path, buffer, (e)=>{console.log(e)});
         }
+
+        
     }
 
     redirect(`/cms/${postName}/`);
