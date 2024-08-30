@@ -3,7 +3,7 @@ import React from "react";
 
 type InputCheckBoxProps = {
     className?: String,
-    choices: String[],
+    choices: any[],
 }
 export default function InputCheckBox({className='', choices=[]}: InputCheckBoxProps){
     const renderChoices = (arr:any) => {

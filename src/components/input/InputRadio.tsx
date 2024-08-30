@@ -1,8 +1,16 @@
 'use client'
 import React from "react";
-export default function InputRadio({className='customClass', choices=[], name="choice"}){
-    const renderChoices = (arr) => {
-        return arr.map((val, index)=> {
+
+
+type InputRadioProps = {
+    className?: String,
+    choices: any[],
+    name?: string
+}
+
+export default function InputRadio({className='customClass', choices=[], name="choice"}:InputRadioProps){
+    const renderChoices = (arr:any) => {
+        return arr.map((val:any, index:any)=> {
             return  <React.Fragment key={index}>
                 <label htmlFor={val} className={`input-radio__wrapper ${className}-input-radio__wrapper`}>
                     <input type="radio" name={name} id={val} className={`input-radio__radio ${className}-input-radio__radio`} />

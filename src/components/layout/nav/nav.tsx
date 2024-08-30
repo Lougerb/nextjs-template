@@ -3,7 +3,7 @@
 import React, {useState, useRef} from "react";
 function Nav() {
     const [nav, setNav] = useState(false);
-    const navEl = useRef();
+    const navEl = React.useRef<HTMLInputElement>(null);
 
     const trigger = () => {
         nav?setNav(false):setNav(true);
