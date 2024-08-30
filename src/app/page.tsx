@@ -1,4 +1,5 @@
-import ButtonLink from "@/components/button/buttonLink";
+import ButtonLink from "@/components/button/ButtonLink";
+import React from "react";
 
 export default function Home() {
    return(<>
@@ -12,8 +13,8 @@ export default function Home() {
                         </div>
                     </section>
                     <div className="flex justify-center gap-[2rem] mx-auto">
-                        <ButtonLink className="" href={'subpage'} text={'Go to Subpage'}></ButtonLink>
-                        <ButtonLink className="" href={'crud'} text={'Go to CRUD Page'}></ButtonLink>
+                        <ButtonLink className="" href={'subpage'} text={'Go to Subpage'} target={undefined} download={undefined}></ButtonLink>
+                        <ButtonLink className="" href={'crud'} text={'Go to CRUD Page'} target={undefined} download={undefined}></ButtonLink>
                     </div>
                     
 
