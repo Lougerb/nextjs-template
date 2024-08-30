@@ -1,8 +1,8 @@
 import React from "react";
 
 type InputTextProps = {
-    className: String,
-    id: String,
+    className?: String,
+    id?: String,
     name: String,
     placeholder: String,
     value?: String,

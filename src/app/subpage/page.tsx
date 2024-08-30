@@ -25,7 +25,7 @@ export default function Subpage() {
                     <section className="subpage__section">
                         <h2 className="head2 mb-[2rem]">Input Text</h2>
                         <div className="subpage__cont">
-                            <InputText placeholder={'Enter Text'} id={undefined} /> 
+                            <InputText placeholder={'Enter Text'} /> 
                         </div>
                     </section>
                     <section className="subpage__section">
