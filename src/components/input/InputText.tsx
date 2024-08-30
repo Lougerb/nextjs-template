@@ -3,7 +3,7 @@ import React from "react";
 type InputTextProps = {
     className?: String,
     id?: String,
-    name: String,
+    name?: String,
     placeholder: String,
     value?: String,
     onchange?: Function,
