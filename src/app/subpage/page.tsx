@@ -19,9 +19,7 @@ export default function Subpage() {
                         <div className="subpage__cont">
                             <ButtonLink 
                                 text={'My Button'}
-                                href={'www.google.com'} 
-                                target={undefined} 
-                                download={undefined} /> 
+                                href={'www.google.com'} /> 
                         </div>
                     </section>
                     <section className="subpage__section">

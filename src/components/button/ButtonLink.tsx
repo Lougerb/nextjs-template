@@ -3,7 +3,7 @@
 import React from "react";
 
 type ButtonLinkProps = {
-    className: String,
+    className?: String,
     text: String,
     href: String,
     target?: String,
