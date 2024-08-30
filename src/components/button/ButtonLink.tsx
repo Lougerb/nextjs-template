@@ -6,7 +6,8 @@ type ButtonLinkProps = {
     className: String,
     text: String,
     href: String,
-    target: String,
+    target?: String,
+    download?: String,
     onClick?: React.MouseEventHandler
 }
 
