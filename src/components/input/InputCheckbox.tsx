@@ -1,9 +1,13 @@
 'use client'
 import React from "react";
 
-export default function InputCheckBox({className='customClass', choices=[]}){
-    const renderChoices = (arr) => {
-        return arr.map((val, index)=> {
+type InputCheckBoxProps = {
+    className?: String,
+    choices: String[],
+}
+export default function InputCheckBox({className='', choices=[]}: InputCheckBoxProps){
+    const renderChoices = (arr:any) => {
+        return arr.map((val:any, index:any)=> {
             return  <React.Fragment key={index}>
                 <label htmlFor={val} className={`input-checkbox__wrapper ${className}-input-checkbox__wrapper`}>
                     <input type="checkbox" name={val} id={val} className={`input-checkbox__radio ${className}-input-checkbox__radio`} />
