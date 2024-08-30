@@ -3,7 +3,7 @@
 import React from "react";
 
 type ButtonProps = {
-    className: String,
+    className?: String,
     text: String,
     onClick?: React.MouseEventHandler
 }

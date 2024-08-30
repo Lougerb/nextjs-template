@@ -1,6 +1,6 @@
 import React from "react";
 type SubmitButton = {
-    className: String,
+    className?: String,
     text: String
 }
 export default function SubmitButton({className="customClass", text}: SubmitButton){

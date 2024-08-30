@@ -1,13 +1,13 @@
 import React from "react";
 
 type InputTextProps = {
-    className: String,
-    id: String,
-    name: String,
-    placeholder: String,
-    value?: String,
-    onchange?: Function,
-    defaultValue?: String,
+    className?: string,
+    id?: string,
+    name?: string,
+    placeholder: string,
+    value?: string,
+    onchange?: any,
+    defaultValue?: string,
 }
 export default function InputText({className="", id, name='', placeholder="placeholder", value, onchange, defaultValue}: InputTextProps) {
     return (<>

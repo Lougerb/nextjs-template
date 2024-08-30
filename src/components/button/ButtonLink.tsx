@@ -3,10 +3,11 @@
 import React from "react";
 
 type ButtonLinkProps = {
-    className: String,
-    text: String,
-    href: String,
-    target: String,
+    className?: string,
+    text: string,
+    href: string,
+    target?: string,
+    download?: string,
     onClick?: React.MouseEventHandler
 }
 

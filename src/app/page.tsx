@@ -13,8 +13,7 @@ export default function Home() {
                         </div>
                     </section>
                     <div className="flex justify-center gap-[2rem] mx-auto">
-                        <ButtonLink className="" href={'subpage'} text={'Go to Subpage'} target={undefined} download={undefined}></ButtonLink>
-                        <ButtonLink className="" href={'crud'} text={'Go to CRUD Page'} target={undefined} download={undefined}></ButtonLink>
+                        <ButtonLink className="" href={'subpage'} text={'Go to Subpage'}></ButtonLink>
                     </div>
                     
 
