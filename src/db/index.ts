@@ -1,4 +1,5 @@
 import { sql } from '@vercel/postgres';
 import { drizzle } from 'drizzle-orm/vercel-postgres';
-const db = drizzle(sql)
-const result = await db.select().from(...);
+import { config } from 'dotenv';
+config({ path: '.env.development.local' }); // or .env
+export const db = drizzle(sql);
