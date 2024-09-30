@@ -1,4 +1,3 @@
-"use server"
 import { createBlog } from "@/db/blog/queries/insert";
 import InputText from "@/components/input/InputText";
 import ButtonLink from "@/components/button/ButtonLink";

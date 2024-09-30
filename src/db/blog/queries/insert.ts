@@ -12,5 +12,5 @@ export async function createBlog(formData: FormData) {
   }
   await db.insert(blogTable).values(newPost);
   
-  redirect('/cms/blog/')
+  redirect('/cms/blog/');
 }

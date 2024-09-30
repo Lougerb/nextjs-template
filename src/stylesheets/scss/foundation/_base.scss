@@ -20,6 +20,10 @@ time, mark, audio, video {
 html {
     font: 10px/1.7 $font-family;
 
+	@include under_vw(1366) {
+		font-size: 0.7321vw;
+	}
+
 	@include mq_sp {
 		font-size: 2.667vw;
 	}
@@ -29,10 +33,6 @@ body {
     display: block;
     font-size: 1.6rem;
 	font-family: $font-family;
-
-	@include over_vw(768) {
-		min-width: $pc-layout-width;
-	}
 }
 
 a {
