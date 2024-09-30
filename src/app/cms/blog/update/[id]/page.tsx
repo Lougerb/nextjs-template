@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 
 export default function UpdateBlog({params: {id}}:{params: {id:number}}) {
 
-    const [data, setData] = useState({});
+    const [data, setData] = useState({title:'', content:'', image: 0, createdAt: new Date, updatedAt: new Date});
     const [isLoading, setLoading] = useState(true);
 
     const [title, settitle] = useState('');
@@ -54,6 +54,7 @@ export default function UpdateBlog({params: {id}}:{params: {id:number}}) {
                 title: title, 
                 content: content, 
                 image: image,
+                createdAt: new Date(data.createdAt),
                 updatedAt: new Date});
             console.log(data);
         }
