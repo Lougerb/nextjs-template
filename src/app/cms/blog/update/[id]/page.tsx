@@ -54,7 +54,6 @@ export default function UpdateBlog({params: {id}}:{params: {id:number}}) {
                 title: title, 
                 content: content, 
                 image: image,
-                createdAt: data.createdAt ? new Date(data.createdAt) : undefined,
                 updatedAt: new Date});
             console.log(data);
         }
