@@ -15,7 +15,7 @@ export default async function Blog() {
                     <div className="mb-1">
                         <b>ID:</b><span>{postID}</span> | <b>Title:</b><span>{item.title}</span> | <b>Content:</b><span>{item.content}</span>
                         <DeleteButton id={postID}/> 
-                        <a href={`/cms/blog/update/${item.id}`} className="leading-none inline-block bg-blue-400 rounded-md px-[1rem] py-[0.5rem] text-white">Update</a>
+                        <a href={`/cms/blog/edit/${item.id}`} className="leading-none inline-block bg-blue-400 rounded-md px-[1rem] py-[0.5rem] text-white">Update</a>
                     </div>
                 </React.Fragment>
             );

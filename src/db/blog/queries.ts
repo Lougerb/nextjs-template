@@ -2,6 +2,7 @@ import { asc, between, count, eq, getTableColumns, sql } from 'drizzle-orm';
 import { db } from '@/db/index';
 import { SelectBlog, blogTable, InsertBlog } from '@/db/schema';
 import { redirect } from "next/navigation";
+import { NextResponse, NextRequest } from "next/server";
 
 
 // Get all posts
@@ -37,8 +38,14 @@ export async function createBlog(formData: FormData) {
 
 // Update a selected Post
 export async function updateBlog(id: SelectBlog['id'], data: Partial<Omit<SelectBlog, 'id'>>) {
+  try {
     await db.update(blogTable).set(data).where(eq(blogTable.id, id));
-    redirect('/cms/blog/');
+    // const res = await db.update(blogTable).set(data).where(eq(blogTable.id, id));
+    // return Response.json(res);
+    
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // export async function updateBlog(id: SelectBlog['id'], formData: FormData) {
