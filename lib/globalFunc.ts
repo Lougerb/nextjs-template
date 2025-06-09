@@ -2,6 +2,7 @@ import { join } from "path";
 
 const listMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 const listDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export const base = process.env.BASE_URL;
 
 export function getDateTime (date: Date) {
 
