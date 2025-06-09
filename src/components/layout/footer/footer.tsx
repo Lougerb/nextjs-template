@@ -1,19 +1,20 @@
 import Image from 'next/image';
 import React from 'react';
-import { base } from 'lib/globalFunc';
 
 
-function Footer() {
+
+function Footer({baseUrl}:any) {
+    
     return (
         <footer className="footer">
             <div className="layout">
                 <div className="footer-wrapper ">
                     <div className="footer-cont1">
                         <a href="/" className="footer-cont1__logo">
-                            <Image src={`${base}/assets/img/common/logo.svg`} width={158} height={80} alt='footer-logo' />
+                            <Image src={`/assets/img/common/logo.svg`} width={158} height={80} alt='footer-logo' />
                         </a>
                         <div className="footer-cont1__info">
-                            <p className="footer-cont1__info__txt">Address: 123 Street St., Village City {base}</p>
+                            <p className="footer-cont1__info__txt">Address: 123 Street St., Village City</p>
                             <p className="footer-cont1__info__txt">Tel: 1234-567-8901</p>
                             <p className="footer-cont1__info__txt">Fax: 123-456-789</p>
                         </div>
