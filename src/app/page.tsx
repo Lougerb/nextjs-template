@@ -14,6 +14,7 @@ export default function Home() {
                     </section>
                     <div className="flex justify-center gap-[2rem] mx-auto">
                         <ButtonLink className="" href={'subpage'} text={'Go to Subpage'}></ButtonLink>
+                        <ButtonLink className="" href={'cms/blog'} text={'CMS Page'}></ButtonLink>
                     </div>
                     
 

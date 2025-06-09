@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import logo from '@/assets/img/common/logo.svg';
 import React from 'react';
 
 export default function Header(){
@@ -7,7 +6,7 @@ export default function Header(){
         <header className="header">
             <h1 className="head1">
                 <a href="/" className="header-logo">
-                    <Image src={logo} height={60} alt='logo'/>
+                    <Image src={'assets/img/common/logo.svg'} height={60} width={119} alt='logo'/>
                 </a>
             </h1>
         </header>

@@ -1,4 +1,3 @@
-import logo from '@/assets/img/common/logo.svg';
 import Image from 'next/image';
 import React from 'react';
 
@@ -9,7 +8,7 @@ function Footer() {
                 <div className="footer-wrapper ">
                     <div className="footer-cont1">
                         <a href="/" className="footer-cont1__logo">
-                            <Image src={logo} alt='footer-logo' />
+                            <Image src={'assets/img/common/logo.svg'} width={158} height={80} alt='footer-logo' />
                         </a>
                         <div className="footer-cont1__info">
                             <p className="footer-cont1__info__txt">Address: 123 Street St., Village City</p>
