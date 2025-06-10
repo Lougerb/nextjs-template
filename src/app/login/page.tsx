@@ -2,7 +2,7 @@ import InputText from "@/components/input/InputText";
 import InputPassword from "@/components/input/InputPassword";
 import SubmitButton from "@/components/button/SubmitButton";
 
-export default async ()=>{
+export default async function Login(){
     return(
         <>
             <div className="layout py-[5rem]">
