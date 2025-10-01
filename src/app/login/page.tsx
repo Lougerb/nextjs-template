@@ -14,6 +14,7 @@ export default async function Login(){
                     <InputPassword placeholder={"Password"} name="password"  id="password" className="mb-[2rem]" />
                     <SubmitButton text={'Submit'} />
                 </form>
+                
             </div>
         </>
     )
